@@ -4,3 +4,5 @@ coverage/
 work/
 .env*
 !.env.example
+
+.vercel/

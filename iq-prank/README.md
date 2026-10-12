@@ -92,6 +92,8 @@ npx.cmd vercel --prod
 
 ### 方法二：GitHub + Vercel 网页导入
 
+**当前仓库提示：** 本网站位于 `ruishen236/-` 仓库的 `iq-prank-download` 分支、`iq-prank` 子目录。原来的 `main` 不包含本网站。网页导入时需选择该分支，Root Directory 设为 `iq-prank`，生产分支也设为 `iq-prank-download`；如果界面无法选择分支，使用方法一从电脑的 `iq-prank` 文件夹直接部署。项目已提供 `vercel.json` 固定安装、框架、构建命令及输出目录。
+
 1. 登录自己的 GitHub 账号，新建个人仓库，例如 `iq-prank`。
 2. 可使用 GitHub Desktop 将项目文件夹加入仓库并发布；不要上传 `node_modules`、`.env`，项目已提供 `.gitignore`。
 3. 登录 [Vercel](https://vercel.com/)，点击 **Add New → Project**。

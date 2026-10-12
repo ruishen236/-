@@ -82,3 +82,5 @@ Windows 真机测试和公开部署未执行。
 新增文件清单与运行、Windows、Vercel部署说明见 `iq-prank/README.md`；实际验证见 `iq-prank/VALIDATION.md`。依赖安装、7项测试和生产构建通过；Chromium桌面和320/375/390/768像素宽度的完整流程通过，无页面运行错误或横向溢出。Windows和真实手机未实测，公网部署未完成。使用 `iq-prank/start-windows.cmd` 或在该子目录运行 `npm install`、`npm run dev`；无需运行StockLab后端。
 
 用户已授权将独立项目同步到 GitHub 新分支 `iq-prank-download`；交付说明补充该分支的 ZIP 下载入口和解压步骤。此次仅新增 `iq-prank/` 和更新本进度文档，原有主分支及 StockLab 功能不变。
+
+Vercel部署准备：在 `iq-prank/vercel.json` 固定Vite框架、`npm ci` 安装、`npm run build` 构建和 `dist` 输出；忽略本地 `.vercel/` 账号/项目关联目录。部署使用 `iq-prank-download` 分支的 `iq-prank` 根目录。Vercel账号尚待用户连接授权，未声明公网部署完成。

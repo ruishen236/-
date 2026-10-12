@@ -1,0 +1,8 @@
+export default function Diagram({type}) {
+  if(type==='arrow') return <div className="diagram arrow-diagram" role="img" aria-label="一个指向上方的箭头"><span>↑</span><small>顺时针旋转 90° ↻</small></div>;
+  if(type==='squares') return <div className="diagram"><div className="square-grid" role="img" aria-label="一个划分成2乘2网格的大正方形">{[0,1,2,3].map(i=><i key={i}/>)}</div></div>;
+  if(type==='equation') return <div className="diagram equation" aria-label="圆加圆等于4，三角形加圆等于7"><span>● + ● = 4</span><span>▲ + ● = 7</span></div>;
+  if(type==='matrix') return <div className="diagram"><div className="matrix" role="img" aria-label="三行箭头：上右下；右下左；下左问号">{['↑','→','↓','→','↓','←','↓','←','?'].map((s,i)=><span key={i}>{s}</span>)}</div></div>;
+  if(type==='net') return <div className="diagram"><div className="cube-net" role="img" aria-label="正方体展开图：A B C D横向相连，E在B上方，F在B下方">{[{name:'A',x:1,y:2},{name:'B',x:2,y:2},{name:'C',x:3,y:2},{name:'D',x:4,y:2},{name:'E',x:2,y:1},{name:'F',x:2,y:3}].map(c=><span key={c.name} style={{gridColumn:c.x,gridRow:c.y}}>{c.name}</span>)}</div></div>;
+  return <div className="diagram"><svg viewBox="0 0 220 180" role="img" aria-label="六面涂色、每边分成4份的正方体" className="cube-svg"><path d="M110 12 190 52 110 94 30 52Z" fill="#86acff"/><path d="M30 52 110 94 110 168 30 126Z" fill="#477af0"/><path d="M110 94 190 52 190 126 110 168Z" fill="#2855cb"/><g stroke="#fff" strokeWidth="1.2" opacity=".8">{[1,2,3].map(i=><g key={i}><path d={`M${30+i*20} ${52+i*10.5}v74 M${110+i*20} ${94-i*10.5}v74 M30 ${52+i*18.5}l80 42 80-42 M${30+i*20} ${52-i*10}l80 42 M${110+i*20} ${12+i*10}l-80 40`}/></g>)}</g></svg></div>;
+}

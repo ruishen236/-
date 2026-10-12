@@ -74,3 +74,11 @@ Windows 真机测试和公开部署未执行。
 ## 仓库同步
 
 按用户授权将规划文档和阶段一实现一并提交至 `ruishen236/-` 的 `main` 分支。提交不包含虚拟环境、node_modules、构建产物、数据库或本地凭据。Windows 运行方式见 README，尚未在 Windows 真机验证。
+
+## 独立项目：整蛊版在线智商测试（2026-10-12）
+
+按用户本次新需求，在 `iq-prank/` 新增独立 React + Vite + JavaScript 网站，不接入 StockLab 前后端。包含原创15题、三类各5题、答题返回修改与校验、约4秒分析、延迟固定结果、纸屑彩带、音效与静音、重测分享、昵称与明暗模式。独立题库和结果配置方便修改。
+
+新增文件清单与运行、Windows、Vercel部署说明见 `iq-prank/README.md`；实际验证见 `iq-prank/VALIDATION.md`。依赖安装、7项测试和生产构建通过；Chromium桌面和320/375/390/768像素宽度的完整流程通过，无页面运行错误或横向溢出。Windows和真实手机未实测，公网部署未完成。使用 `iq-prank/start-windows.cmd` 或在该子目录运行 `npm install`、`npm run dev`；无需运行StockLab后端。
+
+用户已授权将独立项目同步到 GitHub 新分支 `iq-prank-download`；交付说明补充该分支的 ZIP 下载入口和解压步骤。此次仅新增 `iq-prank/` 和更新本进度文档，原有主分支及 StockLab 功能不变。
